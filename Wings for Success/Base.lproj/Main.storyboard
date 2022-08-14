@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qvT-1W-NW6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Jkh-Ze-iib">
+            <objects>
+                <tabBarController id="qvT-1W-NW6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e2v-V9-U6W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.41568624970000001" green="0.61960786580000005" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.41568624970000001" green="0.61960786580000005" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6cJ-tj-08p" kind="relationship" relationship="viewControllers" id="96a-XO-8Rd"/>
+                        <segue destination="QSI-sI-puH" kind="relationship" relationship="viewControllers" id="T0s-Ur-Oed"/>
+                        <segue destination="Wim-FD-tN2" kind="relationship" relationship="viewControllers" id="LXm-4c-xjR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGN-Xj-dlT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11" y="-133"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="q1o-Bt-uaU">
+            <objects>
+                <navigationController id="6cJ-tj-08p" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ETJ-bU-pfo">
+                        <color key="badgeColor" red="0.4196078479" green="0.59215688710000003" blue="0.72156864399999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="39V-2l-SYN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gej-o4-cTm" kind="relationship" relationship="rootViewController" id="nah-aG-YOW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DgX-Mo-5kh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-891" y="534"/>
+        </scene>
+        <!--Home Page View Controller-->
+        <scene sceneID="NXO-O9-2VU">
+            <objects>
+                <viewController id="gej-o4-cTm" customClass="HomePageViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="epk-MY-POA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Wings for Success! " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDN-vu-HAD">
+                                <rect key="frame" x="18" y="158" width="394" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxA-Go-3BU">
+                                <rect key="frame" x="32" y="233" width="347" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Our mission is to empower women and girls in need to achieve career and economic stability through education, apparel, and advocacy.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Italic" family="Optima" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XwF-9j-hJ1" customClass="overviewVideo">
+                                <rect key="frame" x="42" y="419" width="337" height="253"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="istockphoto-1193451471-612x612" translatesAutoresizingMaskIntoConstraints="NO" id="H7f-5w-WC2">
+                                <rect key="frame" x="0.0" y="680" width="75" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="vJg-fJ-4lN">
+                                <rect key="frame" x="52" y="45" width="310" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-tu-yGz">
+                                <rect key="frame" x="29" y="761" width="100" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Volunteer">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.41568624970000001" green="0.61960786580000005" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="volunteerForm:" destination="gej-o4-cTm" eventType="touchUpInside" id="89C-bO-qel"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTA-sX-mgw">
+                                <rect key="frame" x="137" y="761" width="140" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Appointments">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.41568627450980389" green="0.61960786580000005" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="appointments:" destination="gej-o4-cTm" eventType="touchUpInside" id="lk5-k9-MEs"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="We have two locations, Exton and Kennett Square, that provide both clothing and workshops." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu8-sh-vnl">
+                                <rect key="frame" x="52" y="686" width="354" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dr-Rx-kbG">
+                                <rect key="frame" x="213" y="362" width="93" height="36.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Extra Info">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.5647059083" green="0.68235301969999995" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="fdv-UB-yhS" kind="showDetail" id="mFa-GB-eJj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-en-JIj">
+                                <rect key="frame" x="285" y="761" width="98" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Events">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.41568627450000001" green="0.61960786580000005" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="events:" destination="gej-o4-cTm" eventType="touchUpInside" id="d1r-A4-DSW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Co-yo-n01">
+                                <rect key="frame" x="112" y="361" width="88" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Donate!">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.5647059083" green="0.68235301969999995" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="S0I-Ss-MeD" kind="showDetail" id="8pa-8Q-6Jz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rSX-IF-x0W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ahA-3Y-A3a"/>
+                    <connections>
+                        <outlet property="overviewVideo" destination="XwF-9j-hJ1" id="Jon-L2-n9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1qj-zb-M2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Rtz-l0-upi"/>
+                <tapGestureRecognizer id="Ah5-Ba-4e7"/>
+            </objects>
+            <point key="canvasLocation" x="-891.304347826087" y="1190.625"/>
+        </scene>
+        <!--Little White Dresses-->
+        <scene sceneID="cfe-Gg-fZU">
+            <objects>
+                <viewController id="6In-4B-dOO" customClass="WhiteDressesViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iK1-Ab-8c2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ubb-9D-gX7">
+                                <rect key="frame" x="0.0" y="145" width="414" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bel-9a-KdA"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Little White Dresses" id="oaI-im-BWx">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="Yxy-zX-Hzq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="theContainer" destination="Ubb-9D-gX7" id="hSp-bt-CVF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HPd-Ek-Jek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-264" y="1846"/>
+        </scene>
+        <!--Fashion Tips-->
+        <scene sceneID="ViD-Jm-8gm">
+            <objects>
+                <viewController title="Fashion Tips" id="jqy-nJ-Pnx" customClass="FashionTipsViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bal-Kn-U0L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQz-Od-Sa4">
+                                <rect key="frame" x="29" y="177" width="171" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="Image" title=""/>
+                                <connections>
+                                    <segue destination="6In-4B-dOO" kind="show" id="eel-yv-vNg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceF-Ob-YvY">
+                                <rect key="frame" x="221" y="190" width="171" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="jeans"/>
+                                <connections>
+                                    <segue destination="rQX-t7-snH" kind="show" id="dFs-HD-h2F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EF-ps-8ky">
+                                <rect key="frame" x="29" y="378" width="171" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="10pieces"/>
+                                <connections>
+                                    <segue destination="epo-sd-Gze" kind="show" id="ozs-7L-6dj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLp-6X-uvE">
+                                <rect key="frame" x="223" y="379" width="169" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="statement"/>
+                                <connections>
+                                    <segue destination="ZhJ-2T-mB1" kind="show" id="nP9-RX-DUq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dec-HP-Y6h">
+                                <rect key="frame" x="223" y="582" width="169" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="buttonDown"/>
+                                <connections>
+                                    <segue destination="1lv-ff-Q47" kind="show" id="rMa-CK-Thp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmf-Ve-bFd">
+                                <rect key="frame" x="29" y="582" width="171" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="coolweather"/>
+                                <connections>
+                                    <segue destination="smA-Jp-P7F" kind="show" id="k3I-bD-HoY"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Our fashionista, Rachel (Insta - @raerae619), has provided Wings some of the best fashion tips!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9wq-WJ-U7A">
+                                <rect key="frame" x="20" y="91" width="380" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7pV-OW-zPl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fashion Tips" id="hGK-rE-Fb4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bc7-yL-uEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13.043478260869566" y="1194.6428571428571"/>
+        </scene>
+        <!--Post Interview Questions-->
+        <scene sceneID="Qyg-19-Nmf">
+            <objects>
+                <viewController id="dvz-Om-nst" customClass="PostInterviewQuestionsViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yG0-7w-Zn1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-fr-dPt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bQG-CW-fk6"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post Interview Questions" id="WJg-eM-ViE">
+                        <barButtonItem key="backBarButtonItem" title="Job Advice" id="MI1-3d-3qf"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="postQuestionsContainer" destination="BD6-fr-dPt" id="Qqw-Rg-UwL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrN-Ix-HjA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="330.13392857142856"/>
+        </scene>
+        <!--Job Advice-->
+        <scene sceneID="ZZ0-1S-bP7">
+            <objects>
+                <viewController id="NKd-FX-nw8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VqN-wW-GOz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwA-ZT-pOs">
+                                <rect key="frame" x="-1" y="149" width="224" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="questionsToAskInt"/>
+                                <connections>
+                                    <segue destination="dvz-Om-nst" kind="show" id="0xP-RF-XiB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69g-bH-VCy">
+                                <rect key="frame" x="12" y="357" width="199" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="timeBetweenJobs"/>
+                                <connections>
+                                    <segue destination="udT-g9-SvZ" kind="show" id="Ydv-us-RLI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-q8-bqT">
+                                <rect key="frame" x="203" y="357" width="199" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="answerCareers"/>
+                                <connections>
+                                    <segue destination="hBD-la-DIK" kind="show" id="LLN-sU-qiU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdV-hR-Y4F">
+                                <rect key="frame" x="13" y="554" width="199" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="buildConfidence"/>
+                                <connections>
+                                    <segue destination="dAF-KB-sOa" kind="show" id="Q70-gs-Moe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x4P-ti-ZPr">
+                                <rect key="frame" x="203" y="554" width="199" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="questionsToAskBoss"/>
+                                <connections>
+                                    <segue destination="ggk-ve-5jS" kind="show" id="rTh-RI-hT3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sh-9i-3Ws">
+                                <rect key="frame" x="190" y="149" width="224" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="afterInt"/>
+                                <connections>
+                                    <segue destination="qFE-WU-ZY9" kind="show" id="auB-qk-xAr"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Find the best job advice by clicking on the images!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C3h-x0-Xna">
+                                <rect key="frame" x="25" y="88" width="365" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uy6-4j-Bro"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Job Advice" largeTitleDisplayMode="always" id="RyP-St-qjH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tq-Ik-nOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889.85507246376824" y="1194.6428571428571"/>
+        </scene>
+        <!--Building Self Confidence-->
+        <scene sceneID="xGP-Kw-Dq4">
+            <objects>
+                <viewController id="dAF-KB-sOa" customClass="SelfConfidenceViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WXX-iL-vLq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcK-dP-Y7E">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eeZ-lZ-s82"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Building Self Confidence" id="PFs-p3-y7c"/>
+                    <connections>
+                        <outlet property="confidenceContainer" destination="dcK-dP-Y7E" id="uAo-TW-yPf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tla-L6-kLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="1689.5089285714284"/>
+        </scene>
+        <!--Questions to Ask Bosses-->
+        <scene sceneID="xVq-wm-2tK">
+            <objects>
+                <viewController id="ggk-ve-5jS" customClass="BossQuestionsViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f7P-SH-dNe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSc-Ka-Ewb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ayf-5Q-pPZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Questions to Ask Bosses" id="pLe-h7-OH4"/>
+                    <connections>
+                        <outlet property="bossQuestionsContainer" destination="wSc-Ka-Ewb" id="7XW-Qf-bPk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0T-44-pNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792.753623188406" y="1689.5089285714284"/>
+        </scene>
+        <!--After Interview-->
+        <scene sceneID="WcB-SZ-aSi">
+            <objects>
+                <viewController id="qFE-WU-ZY9" customClass="AfterInterviewViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZSk-Zj-i49">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUQ-xw-qDR">
+                                <rect key="frame" x="50" y="525" width="315" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXE-8o-8Js">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="909"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h0n-0z-k6g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="After Interview" id="9p2-3v-jYn"/>
+                    <connections>
+                        <outlet property="afterInterviewContainer" destination="cXE-8o-8Js" id="7sp-iM-UJK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HGc-Yj-ch4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2860.8695652173915" y="329.46428571428572"/>
+        </scene>
+        <!--Things To Do In Between Jobs-->
+        <scene sceneID="bnG-Ld-2Cr">
+            <objects>
+                <viewController id="udT-g9-SvZ" customClass="BetweenJobsViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9O6-mB-yWU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-le-YSK">
+                                <rect key="frame" x="-265" y="342" width="960" height="252"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.49885735539999998" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qLm-sW-mWs">
+                                <rect key="frame" x="-273" y="334" width="981" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.49885735539999998" colorSpace="custom" customColorSpace="displayP3"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oxb-0x-zIf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Htm-nm-wpp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Things To Do In Between Jobs" id="DcO-h7-sh6">
+                        <barButtonItem key="backBarButtonItem" title="Job Advice" id="iko-iq-JLY"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="betweenJobsContainer" destination="oxb-0x-zIf" id="g1z-eL-Qz2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2x-Hd-PmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="1040.625"/>
+        </scene>
+        <!--Changing Careers-->
+        <scene sceneID="S4D-1K-Ydl">
+            <objects>
+                <viewController id="hBD-la-DIK" customClass="ChangingCareersViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="04J-de-9gb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iig-Ni-mjR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TKQ-hg-RQa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Changing Careers" id="arC-UI-5Vw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="FHx-J5-wSe"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="changingCareersContainer" destination="iig-Ni-mjR" id="W9E-gl-94w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqx-4N-kVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2794.202898550725" y="1050.6696428571429"/>
+        </scene>
+        <!--Job Advice-->
+        <scene sceneID="QhX-gr-mad">
+            <objects>
+                <navigationController id="QSI-sI-puH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Job Advice" image="quote.bubble.fill.rtl" catalog="system" id="nzb-KK-yN6">
+                        <color key="badgeColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wF8-gE-BSO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NKd-FX-nw8" kind="relationship" relationship="rootViewController" id="fY2-Vz-QPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E48-FV-uSH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="534"/>
+        </scene>
+        <!--Fashion Tips-->
+        <scene sceneID="duX-3J-kb3">
+            <objects>
+                <navigationController id="Wim-FD-tN2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fashion Tips" image="tshirt" catalog="system" id="l2p-5G-bKR">
+                        <color key="badgeColor" red="0.38823530080000002" green="0.61176472900000001" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="t8v-Vn-2aI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jqy-nJ-Pnx" kind="relationship" relationship="rootViewController" id="VKY-EH-H3u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcX-wn-l3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12" y="534"/>
+        </scene>
+        <!--Distressed Jeans           -->
+        <scene sceneID="tLy-hQ-YcF">
+            <objects>
+                <viewController id="rQX-t7-snH" customClass="DistressedJeansViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rsP-TK-yVb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-kT-XhZ">
+                                <rect key="frame" x="0.0" y="137" width="414" height="625"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tHz-4z-Dfi"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Distressed Jeans           " id="1QF-JX-PCr">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="UKn-qf-yxR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="theContainer1" destination="xg9-kT-XhZ" id="CD5-gM-iEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iA7-7u-I1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="396" y="1846"/>
+        </scene>
+        <!--10 Pieces You Need-->
+        <scene sceneID="zue-Ma-HbB">
+            <objects>
+                <viewController id="epo-sd-Gze" customClass="TenPiecesViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZtO-FB-ATh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtC-RX-pMT">
+                                <rect key="frame" x="0.0" y="145" width="414" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r2h-yk-hsR"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="10 Pieces You Need" id="cwo-Eg-Bi1">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="VJa-UI-PuU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="theContainer2" destination="qtC-RX-pMT" id="EeE-LI-ATD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAS-GD-bCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-939" y="2492"/>
+        </scene>
+        <!--Cooler Weather-->
+        <scene sceneID="Opu-7m-Omd">
+            <objects>
+                <viewController id="smA-Jp-P7F" customClass="CoolerWeatherViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wp8-pq-KFg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZ6-aX-hYs">
+                                <rect key="frame" x="0.0" y="145" width="414" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="13l-4p-nIp"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cooler Weather" id="S6U-ln-J11">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="DdC-F9-eEV"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="theContainer3" destination="iZ6-aX-hYs" id="vOd-3r-nhF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EA0-LU-jPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="2492"/>
+        </scene>
+        <!--White Button Downs-->
+        <scene sceneID="5s6-pC-v0t">
+            <objects>
+                <viewController id="1lv-ff-Q47" customClass="ButtonDownViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kdS-YZ-MeV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oNA-xM-wGS">
+                                <rect key="frame" x="0.0" y="145" width="414" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xnm-79-vZC"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="White Button Downs" id="CTk-RI-sV0">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="nlR-Dx-rrJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="theContainer4" destination="oNA-xM-wGS" id="PU9-D4-wxb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcD-qz-6ZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="2492"/>
+        </scene>
+        <!--Statement Tees-->
+        <scene sceneID="Li4-BF-Iz9">
+            <objects>
+                <viewController id="ZhJ-2T-mB1" customClass="StatementTeesViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9BQ-zB-OwS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5g8-C5-FJp">
+                                <rect key="frame" x="0.0" y="137" width="414" height="625"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6EF-QV-IwE"/>
+                        <color key="backgroundColor" red="0.73333333329999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Statement Tees" id="w1W-vM-dlW">
+                        <barButtonItem key="backBarButtonItem" title="Tips" id="UyY-6F-Feh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="theContainer5" destination="5g8-C5-FJp" id="5wu-Kv-I0r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7y-pF-g1B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="2480"/>
+        </scene>
+        <!--Poshmark-->
+        <scene sceneID="ia9-8p-qFb">
+            <objects>
+                <viewController title="Poshmark" id="fdv-UB-yhS" customClass="PoshmarkViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zfz-MD-CTB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="POSHMARK" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-vi-bCS">
+                                <rect key="frame" x="34" y="59" width="347" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="44"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ta1-0P-ijc">
+                                <rect key="frame" x="34" y="131" width="347" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">We have our very own Poshmark page where you can purchase clothing online for a discounted price! You can purchase all different styles of clothing.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="3BI-zD-ema">
+                                <rect key="frame" x="94" y="679" width="226" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86a-ho-WUT">
+                                <rect key="frame" x="140" y="328" width="134" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Open">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
+                                    <color key="baseBackgroundColor" red="0.5647059083" green="0.68235301969999995" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="money:" destination="S0I-Ss-MeD" eventType="touchUpInside" id="Jr2-9q-ezN"/>
+                                    <action selector="poshmark:" destination="fdv-UB-yhS" eventType="touchUpInside" id="iYw-JM-oh5"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRa-aM-ckq">
+                                <rect key="frame" x="34" y="480" width="347" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">If you have any questions, comments, or concerns, please email info@wingsforsuccess.org or call 610-644-6323. Also check us out on Instagram and Facebook @wingsforsuccess! </string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="CONTACT US" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3m-8M-O4m">
+                                <rect key="frame" x="34" y="413" width="347" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="44"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kG2-ZB-ThX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fashion Tips" id="e29-cu-v39"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qrk-el-pJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1678.2608695652175" y="1050.6696428571429"/>
+        </scene>
+        <!--Donate-->
+        <scene sceneID="JPM-Bu-ysw">
+            <objects>
+                <viewController title="Donate" id="S0I-Ss-MeD" customClass="DonateViewController" customModule="Wings_for_Success" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCn-dR-sh8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="DONATE" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYr-U2-Ge1">
+                                <rect key="frame" x="34" y="59" width="347" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="44"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="At Wings, you can make monetary or clothing donations. Anything you give is appreciated! We thank you for your support!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpC-fF-BSb">
+                                <rect key="frame" x="34" y="132" width="347" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehf-ht-Ef2">
+                                <rect key="frame" x="131" y="368" width="152" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Money">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
+                                    <color key="baseBackgroundColor" red="0.5647059083" green="0.68235301969999995" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="money:" destination="S0I-Ss-MeD" eventType="touchUpInside" id="KO4-c2-WlS"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please select what you would like to donate below: " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9p-KY-HUO">
+                                <rect key="frame" x="34" y="285" width="347" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.41568624970000001" green="0.61960786580000005" blue="0.7254902124" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jg-Co-QrE">
+                                <rect key="frame" x="131" y="436" width="152" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Clothes">
+                                    <fontDescription key="titleFontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
+                                    <color key="baseBackgroundColor" red="0.5647059083" green="0.68235301969999995" blue="0.7607843876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clothes:" destination="S0I-Ss-MeD" eventType="touchUpInside" id="vKk-Bh-l3N"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="ruK-E7-Id8">
+                                <rect key="frame" x="94" y="685" width="226" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c59-lr-w5f">
+                                <rect key="frame" x="10" y="505" width="394" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Wings also has its own Amazon Smile account! The next time you order something online, don't forget to add us as the organization you'd like to support :) </string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="irM-Vw-NV6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Fashion Tips" id="yZn-LC-x5E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4XW-FP-eVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1646.376811594203" y="1769.8660714285713"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="10pieces" width="175" height="175"/>
+        <image name="Image" width="175" height="175"/>
+        <image name="afterInt" width="175" height="175"/>
+        <image name="answerCareers" width="175" height="175"/>
+        <image name="appicon" width="225" height="225"/>
+        <image name="buildConfidence" width="175" height="175"/>
+        <image name="buttonDown" width="175" height="175"/>
+        <image name="coolweather" width="175" height="175"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="istockphoto-1193451471-612x612" width="500" height="500"/>
+        <image name="jeans" width="175" height="175"/>
+        <image name="logo" width="1246" height="628"/>
+        <image name="questionsToAskBoss" width="175" height="175"/>
+        <image name="questionsToAskInt" width="175" height="175"/>
+        <image name="quote.bubble.fill.rtl" catalog="system" width="128" height="110"/>
+        <image name="rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="statement" width="175" height="175"/>
+        <image name="timeBetweenJobs" width="175" height="175"/>
+        <image name="tshirt" catalog="system" width="128" height="99"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
