@@ -10,6 +10,8 @@ import WebKit
 
 class HomePageViewController: UIViewController {
 
+    @IBOutlet weak var overviewVideo: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getVideo(videoCode: "fPhpckyH0V4")
@@ -19,10 +21,11 @@ class HomePageViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
    
-
     @IBAction func volunteerForm(_ sender: UIButton) {
         UIApplication.shared.open(URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSf9Z2fLMnVsDA9hY4u6amdikn1kpIoHD-8DIn3nGCSI1XJO2g/viewform")! as URL, options: [:], completionHandler: nil)
     }
+    
+    
     
     @IBAction func events(_ sender: UIButton) {
         UIApplication.shared.open(URL(string: "https://wingsforsuccess.org/events/upcoming-events/")! as URL, options: [:], completionHandler: nil)
@@ -34,6 +37,7 @@ class HomePageViewController: UIViewController {
     }
     
     
+    
    /* @IBAction func donateTap(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "donate") as? DonateViewController else {
             return
@@ -42,13 +46,8 @@ class HomePageViewController: UIViewController {
         present(vc, animated: true)
     } */
     
-    @IBOutlet weak var overviewVideo: WKWebView!
-    
     func getVideo(videoCode: String) {
         let url = URL(string: "https://youtube.com/embed/\(videoCode)")
         overviewVideo.load(URLRequest(url: url!))
     }
-    
-    
-    
 }
