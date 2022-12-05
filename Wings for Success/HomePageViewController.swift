@@ -28,7 +28,7 @@ class HomePageViewController: UIViewController {
     
     
     @IBAction func events(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://wingsforsuccess.org/events/upcoming-events/")! as URL, options: [:], completionHandler: nil)
+        UIApplication.shared.open(URL(string: "https://wingsforsuccess.org/services/one-on-one-advice-session-form-v2/")! as URL, options: [:], completionHandler: nil)
     }
     
     
